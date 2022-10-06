@@ -1,3 +1,5 @@
+GINGYMAN
+
 1) Define required constants:
   1.1) Wordbank for the player to select from
   1.2) Max amount of wrong guesses
