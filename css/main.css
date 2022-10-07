@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #BD9A7A;
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: #BD9A7A;;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    color: #BD9A7A;;
+    text-align: center;
+    margin-top: 70px;
+}
+
+#letter {
+    background-color: #BD9A7A;;
+    border: dotted;
+    border-color: pink;
+}
