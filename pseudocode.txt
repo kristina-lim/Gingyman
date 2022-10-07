@@ -27,14 +27,14 @@ GINGYMAN
 	    4.4.1.1.4) Player will choose a-z letter choices at the bottom of the browser
     4.2.2) Render a message:
       4.2.2.1) If the winner has a value other than null (game still in progress), don’t render a message
-      4.2.2.2) If the winner didn’t guess correctly, render a lost message
+      4.2.2.2) If the winner didn’t guess correctly and used all their chances, render a lost message
       4.2.2.3) Otherwise, render a congratulatory message to which player has won 
   4.3) Wait for the user to click a letter
 
 5) Handle a player clicking a letter:
   5.1) Check which letter is being clicked by using a function:
-    5.1.1) If player chose the letter correctly, letter chosen will become green, then add that letter to the space(s) and allow the player to choose another letter without affecting number of wrong guesses
-    5.1.2) If player chose the letter incorrectly, letter chosen will become red, then number of guesses will go down by -1.
+    5.1.1) If player chose the letter correctly, letter chosen will become green, then add that letter to the space(s) and allow the player to choose another letter without affecting number of chances
+    5.1.2) If player chose the letter incorrectly, letter chosen will become red, then number of chances will go down by -1.
   5.2) If the letter is chosen, immediately return because that letter and space is already taken.
   5.3) If the winner is not null, immediately return because the game is over.
   5.4) Set the winner variable if there's a winner:
