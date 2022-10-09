@@ -4,15 +4,15 @@ const MAX_NUM_CHANCES = 6;
 
 /*----- state variables -----*/
 let rndWord;
-let correctL;
+let guessL;
 let wrongL;
 let winner;
 
 /*----- cached elements  -----*/
 const messageEl = document.querySelector('h2');
-const letterEl = document.querySelectorAll('#letter');
+const guessEl = document.querySelector('guess'); //guessEl -> guessL, so that when guessL is clicked, it could go to id guess
+const letterEl = document.querySelector('#letter');
 const playAgainBtn = document.querySelector('#replay');
-const guessEl = document.getElementById('guess');
 
 /*----- event listeners -----*/
 document.querySelector('#letter').addEventListener('click', letterClick);
@@ -23,7 +23,7 @@ init();
 
 function init() {
   rndWord = Math.floor(Math.random() * words.Length);
-  correctL = '';
+  guessL = '';
   wrongL = '';
   winner = null;
   render();
@@ -33,7 +33,7 @@ function letterClick(evt) {
   const letter = evt.target.innerText;
   if (
     letter !== 'BUTTON' ||
-    correctL.includes(letter) ||
+    guessL.includes(letter) ||
     wrongL.includes(letter) ||
     winner) return;
   
@@ -41,6 +41,10 @@ function letterClick(evt) {
 }
 
 function getWinner() {
+  if (winner === 'L') {
+    guessL === rndWord;
+  }
+  
   if (rndWord === correctL) {
     return 'W';
   } else if (wrongL === MAX_NUM_CHANCES) {
@@ -57,7 +61,9 @@ function render() {
 }
 
 function renderLetterColor() {
-  
+  //use letterEl here so that when guess letter is clicked correctly, it turns green.
+  //if letterEl is incorrect though, turn the thing red
+  //otherwise, have it turn to the original brown color. (how do i code a hex into js?)
 }
 
 function renderMessage() {
