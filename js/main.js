@@ -1,9 +1,10 @@
 /*----- constants -----*/
-const words = ['DREAMWORKS', 'EDDIE MURPHY', 'THE MUFFIN MAN', 'PINOCCHIO', 'SHREK IS LOVE', 'SHREK IS LIFE', 'LORD FARQUAD', 'DONKEY', 'PRINCESS FIONA', 'PUSS IN BOOTS', 'FAR FAR AWAY', 'SHREK FOREVER AFTER', 'CAMERON DIAZ', 'MIKE MYERS', 'OGRES ARE LIKE ONIONS'];
+const WORD_BANK = ['DREAMWORKS', 'EDDIE MURPHY', 'THE MUFFIN MAN', 'PINOCCHIO', 'SHREK IS LOVE', 'SHREK IS LIFE', 'LORD FARQUAD', 'DONKEY', 'PRINCESS FIONA', 'PUSS IN BOOTS', 'FAR FAR AWAY', 'SHREK FOREVER AFTER', 'CAMERON DIAZ', 'MIKE MYERS', 'OGRES ARE LIKE ONIONS'];
 const MAX_NUM_CHANCES = 6;
 
 /*----- state variables -----*/
-let rndWord;
+let wordIdx;
+let word;
 let guessL;
 let wrongL;
 let winner;
@@ -22,7 +23,6 @@ playAgainBtn.addEventListener('click', init);
 init();
 
 function init() {
-  rndWord = Math.floor(Math.random() * words.Length);
   guessL = '';
   wrongL = '';
   winner = null;
@@ -30,43 +30,44 @@ function init() {
 }
 
 function letterClick(evt) {
-  guessEl.textContent = guessL;
-  const letter = evt.target.tagName;
-  if (
-    letter !== 'BUTTON' ||
-    guessL.includes(letter) ||
-    wrongL.includes(letter) ||
-    winner) return;
+  console.log(evt);
+  const letter = evt.target.id;
+  if (evt.target.tagName !== 'BUTTON') {
+    return;
+  } else {
+    evt.target.style.visibility = 'hidden';
+    getWinner(letter);
+  }
   
-  winner = getWinner();
+  // winner = getWinner();
+  
   render();
 }
 
-function getWinner() {
-  if (winner === 'L') return guessL === rndWord;
-  
-  if (rndWord === guessL) {
-    return 'W';
-  } else if (wrongL === MAX_NUM_CHANCES) {
-    return 'L';
-  } else {
-    return null;
-  }
+function getWinner(letter) {
+  //first get string to compare to player letter
+//then split
 }
 
 function render() {
-  renderLetterColor();
+  // renderLetterColor(); icebox feature
+  renderWord();
   renderMessage();
   renderControls();
 }
 
-function renderLetterColor() {
-  
-
-  //use letterEl here so that when guess letter is clicked correctly, it turns green.
-  //if letterEl is incorrect though, turn the thing red
-  //otherwise, have it turn to the original brown color. (how do i code a hex into js?)
+function renderWord() {
+  wordIdx = Math.floor(Math.random() * WORD_BANK.Length);
+  word = WORD_BANK[wordIdx];
+  console.log(wordIdx);
 }
+
+// function renderLetterColor() {
+
+//   //use letterEl here so that when guess letter is clicked correctly, it turns green.
+//   //if letterEl is incorrect though, turn the thing red
+//   //otherwise, have it turn to the original brown color. (how do i code a hex into js?)
+// }
 
 function renderMessage() {
   const chances = MAX_NUM_CHANCES - wrongL.length;
