@@ -30,7 +30,6 @@ function init() {
 }
 
 function letterClick(evt) {
-  console.log(evt);
   const letter = evt.target.id;
   if (evt.target.tagName !== 'BUTTON') {
     return;
@@ -57,9 +56,8 @@ function render() {
 }
 
 function renderWord() {
-  wordIdx = Math.floor(Math.random() * WORD_BANK.Length);
+  wordIdx = Math.floor(Math.random() * WORD_BANK.length);
   word = WORD_BANK[wordIdx];
-  console.log(wordIdx);
 }
 
 // function renderLetterColor() {
