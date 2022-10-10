@@ -3,15 +3,15 @@ const WORD_BANK = ['DREAMWORKS', 'EDDIE MURPHY', 'THE MUFFIN MAN', 'PINOCCHIO', 
 const MAX_NUM_CHANCES = 6;
 
 /*----- state variables -----*/
-let wordIdx;
 let word;
-let guessL;
+let guess;
 let wrongL;
+let holdLetter;
 let winner;
 
 /*----- cached elements  -----*/
 const messageEl = document.querySelector('h2');
-const guessEl = document.querySelector('guess');
+const guessEl = document.getElementById('guess');
 const letterEl = document.querySelector('#letter');
 const playAgainBtn = document.querySelector('#replay');
 
@@ -23,9 +23,16 @@ playAgainBtn.addEventListener('click', init);
 init();
 
 function init() {
-  guessL = '';
+  word = WORD_BANK[Math.floor(Math.random() * WORD_BANK.length)];
+  guess = '';
   wrongL = '';
+  holdL = [];
   winner = null;
+  
+  for (let i = 0; i < word.length; i++) {
+    holdL.push('_');
+  }  
+  guessEl.innerHTML = holdL.join(' ');
   render();
 }
 
@@ -35,43 +42,35 @@ function letterClick(evt) {
     return;
   } else {
     evt.target.style.visibility = 'hidden';
-    getWinner(letter);
+    // getWinner(letter);
   }
   
-  // winner = getWinner();
+  winner = getWinner();
   
   render();
 }
 
-function getWinner(letter) {
-  //first get string to compare to player letter
-//then split
+function getWinner() {
+//   //first get string to compare to player letter
+//   // (function(l) {
+//   //   if (word.match(guess)) {
+//   //     return true;
+//   //   } else {
+//   //     return false;
+//   //   }
+//   // });
 }
 
 function render() {
-  // renderLetterColor(); icebox feature
-  renderWord();
   renderMessage();
   renderControls();
 }
-
-function renderWord() {
-  wordIdx = Math.floor(Math.random() * WORD_BANK.length);
-  word = WORD_BANK[wordIdx];
-}
-
-// function renderLetterColor() {
-
-//   //use letterEl here so that when guess letter is clicked correctly, it turns green.
-//   //if letterEl is incorrect though, turn the thing red
-//   //otherwise, have it turn to the original brown color. (how do i code a hex into js?)
-// }
 
 function renderMessage() {
   const chances = MAX_NUM_CHANCES - wrongL.length;
   if (winner) {
     messageEl.innerText = 'WOW!! CONGRATS ON GUESSING THE RIGHT WORD!';
-  } else if (MAX_NUM_CHANCES < wrongL.length) {
+  } else if (MAX_NUM_CHANCES === wrongL.length) {
     messageEl.innerText = 'OOPS, GAME OVER! GINGY IS BROKEN 😭 TRY AGAIN!';
   } else {
     messageEl.innerHTML == `${chances} CHANCES LEFT`;
