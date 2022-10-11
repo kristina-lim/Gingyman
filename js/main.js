@@ -12,7 +12,7 @@ let winner;
 /*----- cached elements  -----*/
 const messageEl = document.querySelector('h2');
 const guessEl = document.getElementById('guess');
-const letterEl = document.querySelector('#letter');
+const letterEl = document.querySelectorAll('#letter > button');
 const playAgainBtn = document.querySelector('#replay');
 
 /*----- event listeners -----*/
@@ -38,6 +38,10 @@ function init() {
   }  
   guessEl.innerHTML = holdL.join('');
 
+  for (let i = 0; i < letterEl.length; i++) {
+    letterEl[i].style.backgroundColor = '#FFEBC';
+  }
+  
   render();
 }
 console.log(word);
@@ -59,28 +63,51 @@ function letterClick(evt) {
   } else {
       wrongL += letter;
   }
+  
+  winner = getWinner();
+  
   render();
 }
 
 function getWinner() {
   if (!holdL.includes('_')) return 'W';
-  if (wrongL.length > MAX_NUM_CHANCES) return 'L';
+  if (wrongL.length === MAX_NUM_CHANCES) return 'L';
   return null;
+  
 }
 
 function render() {
+  renderButtonColor();
   renderMessage();
   renderControls();
 }
 
+function renderButtonColor() {
+  letterEl.forEach((button) => {
+    const letterBtn = button.innerText;
+    if (wrongL.includes(letterBtn)) {
+      button.style.backgroundColor = 'MistyRose'; //LightCoral //MistyRose
+    } else if (holdL.includes(letterBtn)) {
+      button.style.backgroundColor = 'HoneyDew'; //LightGreen //HoneyDew
+    } else {
+      button.style.backgroundColor = '#FFEBCD';
+    }
+  })
+}
+
 function renderMessage() {
+  guessEl.innerText === holdL.join('');
+  if (winner === 'L') {
+    guessEl.innerText = word;
+  }
+
   const chances = MAX_NUM_CHANCES - wrongL.length;
-  if (winner) {
+  if (winner === 'W') {
     messageEl.innerText = 'WOW!! CONGRATS ON GUESSING THE RIGHT WORD!';
-  } else if (MAX_NUM_CHANCES === wrongL.length) {
+  } else if (winner === 'L') {
     messageEl.innerText = 'OOPS, GAME OVER! GINGY IS BROKEN 😭 TRY AGAIN!';
   } else {
-    messageEl.innerHTML == `${chances} CHANCES LEFT`;
+    messageEl.innerText = `${chances} CHANCES LEFT`;
   }
 }
 
