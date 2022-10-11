@@ -44,25 +44,18 @@ console.log(word);
 
 function letterClick(evt) {
   const letter = evt.target.id;
-  //GUARD
   if (evt.target.tagName !== 'BUTTON' ||
-  guess.includes(letter) ||
+    guess.includes(letter) ||
     wrongL.includes(letter) ||
     winner) return;
   
-    //ADDS LETTER INTO H2 GUESS, 
   if (word.includes(letter)) {
     for (let i = 0; i < word.length; i++) {
       if (word.charAt(i) === letter) {
-        holdL.splice(i, 1, letter) 
-        //.split(',').join('');
-        // guessEl.innerHTML = holdL.join('');
-        // guessEl.innerHTML = guess.replaceAll(',');
-        console.log(holdL);
-        // guessEl.charAt(i).innerText = letter;
+        holdL.splice(i, 1, letter);
       }
     }
-    guessEl.textContent = holdL;
+    guessEl.textContent = holdL.join('');
   } else {
       wrongL += letter;
   }
