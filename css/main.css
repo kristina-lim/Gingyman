@@ -29,6 +29,12 @@ button {
     padding: 20px;
 }
 
+#guess { 
+    font-size: 3vmin;
+    letter-spacing: .5vmin;
+    color: #BD9A7A;
+}
+
 #letter {
     background-color: #BD9A7A;;
     border: dotted;
@@ -44,9 +50,4 @@ button {
 #playagain:hover {
     background-color: #FFEBCD;
     color: red;
-}
-
-#inputword { 
-    font-size: 10vmin;
-    letter-spacing: 5vmin;
 }

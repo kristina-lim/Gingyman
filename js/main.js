@@ -1,12 +1,12 @@
 /*----- constants -----*/
-const WORD_BANK = ['DREAMWORKS', 'EDDIE MURPHY', 'THE MUFFIN MAN', 'PINOCCHIO', 'SHREK IS LOVE', 'SHREK IS LIFE', 'LORD FARQUAD', 'DONKEY', 'PRINCESS FIONA', 'PUSS IN BOOTS', 'FAR FAR AWAY', 'SHREK FOREVER AFTER', 'CAMERON DIAZ', 'MIKE MYERS', 'OGRES ARE LIKE ONIONS'];
+const WORD_BANK = ['DREAMWORKS', 'EDDIE MURPHY', 'THE MUFFIN MAN', 'PINOCCHIO', 'SHREK IS LOVE', 'SHREK IS LIFE', 'LORD FARQUAAD', 'DONKEY', 'PRINCESS FIONA', 'PUSS IN BOOTS', 'FAR FAR AWAY', 'SHREK FOREVER AFTER', 'CAMERON DIAZ', 'MIKE MYERS', 'OGRES ARE LIKE ONIONS'];
 const MAX_NUM_CHANCES = 6;
 
 /*----- state variables -----*/
 let word;
 let guess;
 let wrongL;
-let holdLetter;
+let holdL;
 let winner;
 
 /*----- cached elements  -----*/
@@ -28,37 +28,51 @@ function init() {
   wrongL = '';
   holdL = [];
   winner = null;
-  
+
   for (let i = 0; i < word.length; i++) {
-    holdL.push('_');
+    if (word[i] == ' ') {
+      holdL.push(' ');
+    } else {
+      holdL.push('_');
+    }
   }  
-  guessEl.innerHTML = holdL.join(' ');
+  guessEl.innerHTML = holdL.join('');
+
   render();
 }
+console.log(word);
 
 function letterClick(evt) {
   const letter = evt.target.id;
-  if (evt.target.tagName !== 'BUTTON') {
-    return;
+  //GUARD
+  if (evt.target.tagName !== 'BUTTON' ||
+  guess.includes(letter) ||
+    wrongL.includes(letter) ||
+    winner) return;
+  
+    //ADDS LETTER INTO H2 GUESS, 
+  if (word.includes(letter)) {
+    for (let i = 0; i < word.length; i++) {
+      if (word.charAt(i) === letter) {
+        holdL.splice(i, 1, letter) 
+        //.split(',').join('');
+        // guessEl.innerHTML = holdL.join('');
+        // guessEl.innerHTML = guess.replaceAll(',');
+        console.log(holdL);
+        // guessEl.charAt(i).innerText = letter;
+      }
+    }
+    guessEl.textContent = holdL;
   } else {
-    evt.target.style.visibility = 'hidden';
-    // getWinner(letter);
+      wrongL += letter;
   }
-  
-  winner = getWinner();
-  
   render();
 }
 
 function getWinner() {
-//   //first get string to compare to player letter
-//   // (function(l) {
-//   //   if (word.match(guess)) {
-//   //     return true;
-//   //   } else {
-//   //     return false;
-//   //   }
-//   // });
+  if (!holdL.includes('_')) return 'W';
+  if (wrongL.length > MAX_NUM_CHANCES) return 'L';
+  return null;
 }
 
 function render() {
