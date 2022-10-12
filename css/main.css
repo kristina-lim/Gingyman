@@ -10,6 +10,8 @@ body {
     align-items: center;
     flex-direction: column;
     position: fixed;
+    background-image: url('https://th.bing.com/th/id/R.d1a78d8906a821180239255c9fc9309f?rik=JxknTHxi1nXFnw&riu=http%3a%2f%2f33.media.tumblr.com%2f5320b5b2328e47c1dc6c4d95a65c7370%2ftumblr_n6t4bk2usP1snc5kxo2_r1_500.gif&ehk=Z%2fOGSPTOOwc4uAbKTkJDCDFHwPnhtK3xvxOG3aRhVhs%3d&risl=&pid=ImgRaw&r=0');
+    background-size: cover;
     top: 0;
     right: 0;
     bottom: 0;
@@ -24,7 +26,7 @@ h2 {
     font-size: 2.5vmin;
 }
 
-img {
+#gingy {
     width: 400px;
     height: 550px;
     margin-top: -30px;

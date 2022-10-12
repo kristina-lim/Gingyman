@@ -1,5 +1,5 @@
 /*----- constants -----*/
-const WORD_BANK = ['DREAMWORKS', 'EDDIE MURPHY', 'THE MUFFIN MAN', 'PINOCCHIO', 'SHREK IS LOVE', 'SHREK IS LIFE', 'LORD FARQUAAD', 'DONKEY', 'PRINCESS FIONA', 'PUSS IN BOOTS', 'FAR FAR AWAY', 'SHREK FOREVER AFTER', 'CAMERON DIAZ', 'MIKE MYERS', 'OGRES ARE LIKE ONIONS'];
+const WORD_BANK = ['DREAMWORKS', 'EDDIE MURPHY', 'THE MUFFIN MAN', 'PINOCCHIO', 'SHREK IS LOVE', 'SHREK IS LIFE', 'LORD FARQUAAD', 'DONKEY', 'PRINCESS FIONA', 'PUSS IN BOOTS', 'FAR FAR AWAY', 'SHREK FOREVER AFTER', 'CAMERON DIAZ', 'MIKE MYERS', 'OGRES ARE LIKE ONIONS', 'ALL OGRE NOW', 'YOU CRY YOU LOSE', 'DONT WORRY BE HAPPY', 'JOHN LITHGOW','FAIRY GODMOTHER', 'PRINCE CHARMING', 'QUEEN', 'JULIE ANDREWS', 'BABY DONKEY'];
 const MAX_NUM_CHANCES = 6;
 
 /*----- state variables -----*/
@@ -61,7 +61,7 @@ function letterClick(evt) {
     guessEl.textContent = holdL.join('');
   } else {
       wrongL += letter;
-      gingyEl.src = `imgs/gingy-${wrongL.length}.jpg`;
+     
   }
   
   winner = getWinner();
@@ -79,6 +79,7 @@ function render() {
   renderButtonColor();
   renderMessage();
   renderControls();
+  gingyEl.src = `imgs/gingy-${wrongL.length}.jpg`;
 }
 
 
@@ -105,7 +106,7 @@ function renderMessage() {
   if (winner === 'W') {
     messageEl.innerText = 'WOW!! CONGRATS ON GUESSING THE RIGHT WORD! ';
   } else if (winner === 'L') {
-    messageEl.innerText = 'OOPS, GAME OVER! GINGY IS BROKEN 😭 TRY AGAIN!';
+    messageEl.innerText = 'OH NO! GINGY IS BROKEN 😭 TRY AGAIN!';
   } else {
     messageEl.innerText = `${chances} CHANCES LEFT`;
   }
