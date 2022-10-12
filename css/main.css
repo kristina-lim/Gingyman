@@ -90,7 +90,7 @@ button {
         background-color: #FFEBCD;
         border-radius: 30%;
         margin: 1px;
-        padding: 20px;
+        padding: 18.5px;
     }
     
     #gingy {
@@ -104,6 +104,6 @@ button {
     }
     
     #replay {
-        margin-top: 6.5px;
+        margin-top: 4.5px;
     }
 }
