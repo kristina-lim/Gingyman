@@ -24,7 +24,7 @@ init();
 
 function init() {
   word = WORD_BANK[Math.floor(Math.random() * WORD_BANK.length)];
-  wrongL = '';
+  wrongL = [];
   holdL = [];
   winner = null;
 
@@ -43,7 +43,6 @@ function init() {
   
   render();
 }
-console.log(word);
 
 function letterClick(evt) {
   const letter = evt.target.id;

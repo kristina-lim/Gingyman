@@ -5,17 +5,20 @@
 body {
     color: #BD9A7A;
     text-align: center;
+    height: 70vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     position: fixed;
-    background-image: url('https://th.bing.com/th/id/R.d1a78d8906a821180239255c9fc9309f?rik=JxknTHxi1nXFnw&riu=http%3a%2f%2f33.media.tumblr.com%2f5320b5b2328e47c1dc6c4d95a65c7370%2ftumblr_n6t4bk2usP1snc5kxo2_r1_500.gif&ehk=Z%2fOGSPTOOwc4uAbKTkJDCDFHwPnhtK3xvxOG3aRhVhs%3d&risl=&pid=ImgRaw&r=0');
-    background-size: cover;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    background-image: url('https://th.bing.com/th/id/R.d1a78d8906a821180239255c9fc9309f?rik=JxknTHxi1nXFnw&riu=http%3a%2f%2f33.media.tumblr.com%2f5320b5b2328e47c1dc6c4d95a65c7370%2ftumblr_n6t4bk2usP1snc5kxo2_r1_500.gif&ehk=Z%2fOGSPTOOwc4uAbKTkJDCDFHwPnhtK3xvxOG3aRhVhs%3d&risl=&pid=ImgRaw&r=0');
+    background-size: cover;
+    pointer-events: all;
+    cursor: url('https://th.bing.com/th/id/R.3e83e19fba5df28626740ebc9806de7f?rik=geOmNHV7VVtVjg&riu=http%3a%2f%2fcur.cursors-4u.net%2fholidays%2fimages4%2fhol360.gif&ehk=1mjaVaUmdYqPnXrRe5psUWw6gz9JIE3pJ6nwrbUdidc%3d&risl=&pid=ImgRaw&r=0'), default;
 } 
 
 h1 {
@@ -26,37 +29,82 @@ h2 {
     font-size: 2.5vmin;
 }
 
-#gingy {
-    width: 400px;
-    height: 550px;
-    margin-top: -30px;
+h3 {
+    margin-top: -5px;
 }
+
 
 button {
     background-color: #FFEBCD;
     border-radius: 30%;
     margin: 2px;
     padding: 20px;
+    cursor: url('https://th.bing.com/th/id/R.3e83e19fba5df28626740ebc9806de7f?rik=geOmNHV7VVtVjg&riu=http%3a%2f%2fcur.cursors-4u.net%2fholidays%2fimages4%2fhol360.gif&ehk=1mjaVaUmdYqPnXrRe5psUWw6gz9JIE3pJ6nwrbUdidc%3d&risl=&pid=ImgRaw&r=0') 7 9, default;
+}
+
+#gingy {
+    width: 450px;
+    height: 600px;
+    margin-top: -50px;
 }
 
 #guess { 
+    color: #BD9A7A;
     font-size: 3vmin;
     letter-spacing: 1vmin;
-    margin-top: -65px;
-    color: #BD9A7A;
+    margin-top: -43px;
 }
 
 #letter {
     background-color: #BD9A7A;;
-    border: dotted;
     border-color: pink;
+    border: dotted;
 }
 
 #replay {
-    margin-top: -33px;
+    margin-top: 17px;
+    cursor: url('https://th.bing.com/th/id/R.3e83e19fba5df28626740ebc9806de7f?rik=geOmNHV7VVtVjg&riu=http%3a%2f%2fcur.cursors-4u.net%2fholidays%2fimages4%2fhol360.gif&ehk=1mjaVaUmdYqPnXrRe5psUWw6gz9JIE3pJ6nwrbUdidc%3d&risl=&pid=ImgRaw&r=0'), default;
+    pointer-events:all;
 }
 
 #replay:hover {
     background-color: #FFEBCD;
     color: #F08080;
+    cursor: url('https://th.bing.com/th/id/R.3e83e19fba5df28626740ebc9806de7f?rik=geOmNHV7VVtVjg&riu=http%3a%2f%2fcur.cursors-4u.net%2fholidays%2fimages4%2fhol360.gif&ehk=1mjaVaUmdYqPnXrRe5psUWw6gz9JIE3pJ6nwrbUdidc%3d&risl=&pid=ImgRaw&r=0'), default;
+    pointer-events: all;
+}
+
+@media screen and (max-width: 480px) {
+    
+    
+    #gingy {
+        margin-top: -2000px;
+    }
+    
+    #guess { 
+        color: #BD9A7A;
+        font-size: 3vmin;
+        letter-spacing: 1vmin;
+        margin-top: -100px;
+    }
+    
+    #letter {
+        background-color: red;
+        border-color: pink;
+        border: dotted;
+    }
+    
+    #replay {
+        margin-top: 17px;
+        cursor: url('https://th.bing.com/th/id/R.3e83e19fba5df28626740ebc9806de7f?rik=geOmNHV7VVtVjg&riu=http%3a%2f%2fcur.cursors-4u.net%2fholidays%2fimages4%2fhol360.gif&ehk=1mjaVaUmdYqPnXrRe5psUWw6gz9JIE3pJ6nwrbUdidc%3d&risl=&pid=ImgRaw&r=0'), default;
+        pointer-events:all;
+    }
+    
+    #replay:hover {
+        background-color: #FFEBCD;
+        color: #F08080;
+        cursor: url('https://th.bing.com/th/id/R.3e83e19fba5df28626740ebc9806de7f?rik=geOmNHV7VVtVjg&riu=http%3a%2f%2fcur.cursors-4u.net%2fholidays%2fimages4%2fhol360.gif&ehk=1mjaVaUmdYqPnXrRe5psUWw6gz9JIE3pJ6nwrbUdidc%3d&risl=&pid=ImgRaw&r=0'), default;
+        pointer-events: all;
+    }
+    
 }
