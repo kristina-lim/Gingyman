@@ -59,7 +59,7 @@ button {
 #letter {
     background-color: #BD9A7A;;
     border-color: pink;
-    border: dotted;
+    border-style: dotted;
 }
 
 #replay {
@@ -75,25 +75,26 @@ button {
     h1 {
         font-size: 4vmin;
     }
+
     h2 {
         margin-top: -10px;
         font-size: 3vmin;
     }
     
     h3 {
-        font-size: 3.5vmin;
-        margin-top: -30px;
+        font-size: 3vmin;
+        margin-top: -25px;
     }
     
     button {
         background-color: #FFEBCD;
         border-radius: 30%;
-        margin: 2px;
+        margin: 1px;
         padding: 10px;
     }
     
     #gingy {
-        margin-top: -33px;
+        margin-top: -40px;
     }
     
     #guess { 
