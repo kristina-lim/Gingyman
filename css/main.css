@@ -64,10 +64,45 @@ button {
 
 #replay {
     margin-top: 5px;
-    pointer-events: all;
 }
 
 #replay:hover {
     background-color: #FFEBCD;
     color: #F08080;
+}
+
+@media screen and (max-width: 480px) { 
+    h2 {
+        margin-top: -10px;
+        font-size: 3vmin;
+    }
+    
+    h3 {
+        margin-top: -30px;
+    }
+    
+    button {
+        background-color: #FFEBCD;
+        border-radius: 30%;
+        margin: 2px;
+        padding: 20px;
+    }
+    
+    #gingy {
+        margin-top: -33px;
+    }
+    
+    #guess { 
+        margin-top: -40px;
+    }
+    
+    #letter {
+        background-color: #BD9A7A;;
+        border-color: pink;
+        border: dotted;
+    }
+    
+    #replay {
+        margin-top: 10px;
+    }
 }
