@@ -4,22 +4,30 @@
 
 body {
     color: #BD9A7A;
-    height: 98vh;
-    padding: 20px;
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-}
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+} 
 
 h1 {
-    color: #BD9A7A;;
     margin-top: 0px;
 }
 
 h2 {
-    color: #BD9A7A;;
+    font-size: 2.5vmin;
+}
+
+img {
+    width: 400px;
+    height: 550px;
+    margin-top: -30px;
 }
 
 button {
@@ -31,7 +39,8 @@ button {
 
 #guess { 
     font-size: 3vmin;
-    letter-spacing: .5vmin;
+    letter-spacing: 1vmin;
+    margin-top: -65px;
     color: #BD9A7A;
 }
 
@@ -41,13 +50,11 @@ button {
     border-color: pink;
 }
 
-#playagain {
-    margin-top: 10px;
-    margin-bottom: -20px;
-    padding: 25px;
+#replay {
+    margin-top: -33px;
 }
 
-#playagain:hover {
+#replay:hover {
     background-color: #FFEBCD;
-    color: red;
+    color: #F08080;
 }

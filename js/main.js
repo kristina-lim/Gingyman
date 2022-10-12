@@ -4,16 +4,16 @@ const MAX_NUM_CHANCES = 6;
 
 /*----- state variables -----*/
 let word;
-let guess;
 let wrongL;
 let holdL;
 let winner;
 
 /*----- cached elements  -----*/
 const messageEl = document.querySelector('h2');
-const guessEl = document.getElementById('guess');
 const letterEl = document.querySelectorAll('#letter > button');
-const playAgainBtn = document.querySelector('#replay');
+const guessEl = document.getElementById('guess');
+const playAgainBtn = document.getElementById('replay');
+const gingyEl = document.getElementById('gingy');
 
 /*----- event listeners -----*/
 document.querySelector('#letter').addEventListener('click', letterClick);
@@ -24,7 +24,6 @@ init();
 
 function init() {
   word = WORD_BANK[Math.floor(Math.random() * WORD_BANK.length)];
-  guess = '';
   wrongL = '';
   holdL = [];
   winner = null;
@@ -49,10 +48,10 @@ console.log(word);
 function letterClick(evt) {
   const letter = evt.target.id;
   if (evt.target.tagName !== 'BUTTON' ||
-    guess.includes(letter) ||
+    holdL.includes(letter) ||
     wrongL.includes(letter) ||
     winner) return;
-  
+
   if (word.includes(letter)) {
     for (let i = 0; i < word.length; i++) {
       if (word.charAt(i) === letter) {
@@ -62,10 +61,10 @@ function letterClick(evt) {
     guessEl.textContent = holdL.join('');
   } else {
       wrongL += letter;
+      gingyEl.src = `imgs/gingy-${wrongL.length}.jpg`;
   }
   
   winner = getWinner();
-  
   render();
 }
 
@@ -82,13 +81,14 @@ function render() {
   renderControls();
 }
 
+
 function renderButtonColor() {
   letterEl.forEach((button) => {
     const letterBtn = button.innerText;
     if (wrongL.includes(letterBtn)) {
-      button.style.backgroundColor = 'MistyRose'; //LightCoral //MistyRose
+      button.style.backgroundColor = '#FFE4E1'; //LightCoral#F08080 //MistyRose#FFE4E1
     } else if (holdL.includes(letterBtn)) {
-      button.style.backgroundColor = 'HoneyDew'; //LightGreen //HoneyDew
+      button.style.backgroundColor = '#F0FFF0'; //LightGreen#90EE90 //HoneyDew#F0FFF0
     } else {
       button.style.backgroundColor = '#FFEBCD';
     }
@@ -100,10 +100,10 @@ function renderMessage() {
   if (winner === 'L') {
     guessEl.innerText = word;
   }
-
+  
   const chances = MAX_NUM_CHANCES - wrongL.length;
   if (winner === 'W') {
-    messageEl.innerText = 'WOW!! CONGRATS ON GUESSING THE RIGHT WORD!';
+    messageEl.innerText = 'WOW!! CONGRATS ON GUESSING THE RIGHT WORD! ';
   } else if (winner === 'L') {
     messageEl.innerText = 'OOPS, GAME OVER! GINGY IS BROKEN 😭 TRY AGAIN!';
   } else {
