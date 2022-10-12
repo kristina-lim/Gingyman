@@ -77,7 +77,7 @@ button {
     }
 
     h2 {
-        margin-bottom: -13px;
+        margin-top: -5px;
         font-size: 2vmin;
     }
     
@@ -94,11 +94,11 @@ button {
     }
     
     #gingy {
-        margin-top: -35px;
+        margin-top: -30px;
     }
     
     #guess { 
-        margin-top: -45px;
+        margin-top: -40px;
     }
     
     #replay {
