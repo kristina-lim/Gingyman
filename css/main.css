@@ -83,14 +83,14 @@ button {
     
     h3 {
         font-size: 2.5vmin;
-        margin-top: -8px;
+        margin-top: -6px;
     }
     
     button {
         background-color: #FFEBCD;
         border-radius: 30%;
         margin: 1px;
-        padding: 12px;
+        padding: 13px;
     }
     
     #gingy {
