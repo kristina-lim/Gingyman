@@ -83,24 +83,24 @@ button {
     
     h3 {
         font-size: 2.5vmin;
-        margin-top: -13px;
+        margin-top: -7px;
     }
     
     button {
         background-color: #FFEBCD;
         border-radius: 30%;
         margin: 1px;
-        padding: 11px;
+        padding: 15px;
     }
     
     #gingy {
-        width: 175;
-        height: 275;
+        width: 275;
+        height: 375;
         margin-top: -17px;
     }
     
     #guess { 
-        margin-top: -40px;
+        margin-top: -30px;
     }
     
     #replay {
