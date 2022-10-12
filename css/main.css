@@ -90,13 +90,13 @@ button {
         background-color: #FFEBCD;
         border-radius: 30%;
         margin: 1px;
-        padding: 20px;
+        padding: 14px;
     }
     
     #gingy {
         width: 275;
         height: 375;
-        margin-top: -21px;
+        margin-top: -23px;
     }
     
     #guess { 
