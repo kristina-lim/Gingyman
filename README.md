@@ -83,4 +83,4 @@ Click this link down below to play:
 * Make the button(s) change color when clicked: green for correct and red for incorrect.
 * Add a media query to reformat the game on an iPhone screen.
 * Change mouse cursor to a gingerbread man.
-* Add sounds to game: click sound when you press the buttons, fanfare sound when you guess the right word, lost sound when you lose all your chances.
+* Add sounds to the game: click sound when you press the buttons, fanfare sound when you guess the right word, lost sound when you lose all your chances.
