@@ -48,9 +48,9 @@ When the player loses, a lost message shows up on the top:
 </br>
 <h2>Getting Started</h2>
 Click this link down below to play:
+</br>
 
 [Play Gingyman]("https://kristina-lim.github.io/Gingyman/")
-
 </br>
 <h2>Next Steps (Icebox Items)</h2>
 
