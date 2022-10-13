@@ -74,7 +74,7 @@ If the player wins or loses the game, the replay button pops up on the bottom:
 <h2>Getting Started</h2>
 Click this link down below to play:
 
-[Play Gingyman](targetURL "https://kristina-lim.github.io/Gingyman/")
+[Play Gingyman](https://kristina-lim.github.io/Gingyman/)
 
 <h2>Next Steps (Icebox Items)</h2>
 
