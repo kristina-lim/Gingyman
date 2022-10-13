@@ -40,7 +40,6 @@ function init() {
   for (let i = 0; i < letterEl.length; i++) {
     letterEl[i].style.backgroundColor = '#FFEBC';
   }
-  
   render();
 }
 
@@ -60,9 +59,7 @@ function letterClick(evt) {
     guessEl.textContent = holdL.join('');
   } else {
       wrongL += letter;
-     
   }
-  
   winner = getWinner();
   render();
 }
@@ -71,7 +68,6 @@ function getWinner() {
   if (!holdL.includes('_')) return 'W';
   if (wrongL.length === MAX_NUM_CHANCES) return 'L';
   return null;
-  
 }
 
 function render() {
@@ -92,7 +88,7 @@ function renderButtonColor() {
     } else {
       button.style.backgroundColor = '#FFEBCD';
     }
-  })
+  });
 }
 
 function renderMessage() {

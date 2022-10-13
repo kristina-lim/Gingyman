@@ -1,6 +1,6 @@
 <h1>GINGYMAN</h1>
 <h2>Welcome to Kristina's Gingyman!</h2>
-The outcome of this game is to guess a letter and see if the letter is displayed in the underscore(s). There are six chances given, and each incorrect letter guessed will remove a piece of Gingy.
+This game is an alternative version of Spaceman. The outcome of this game is to guess a letter and see if the letter is displayed in the underscore(s). There are six chances given, and each incorrect letter guessed will remove a piece of Gingy.
 </br>
 </br>
 When the player selects a letter, the letter will not be able to be clicked again. All buttons are a shade of yellowish brown and if an incorrect letter is guessed, the button color will change to red. Otherwise, if a correct letter is guessed, the letter will replace the underscore(s), and the button color will change to green. Once a letter is clicked, the player will not be able to click the same letter.
@@ -50,10 +50,11 @@ When the player loses, a lost message shows up on the top:
 Click this link down below to play:
 </br>
 
-[Play Gingyman]("https://kristina-lim.github.io/Gingyman/")
+[Play Gingyman]('https://kristina-lim.github.io/Gingyman/')
 </br>
 <h2>Next Steps (Icebox Items)</h2>
 
 * Make the button(s) change color when clicked: green for correct and red for incorrect.
 * Add a media query to reformat the game on an iPhone screen.
 * Change mouse cursor to a gingerbread man.
+* Add sounds to game: click sound when you press the buttons, fanfare sound when you guess the right word, lost sound when you lose all your chances.
