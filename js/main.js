@@ -60,7 +60,7 @@ function init() {
       holdL.push("_");
     }
   }
-  guessEl.innerHTML = holdL.join("");
+  guessEl.innerText = holdL.join("");
 
   for (let i = 0; i < letterEl.length; i++) {
     letterEl[i].style.backgroundColor = "#FFEBC";
@@ -126,7 +126,7 @@ function renderMessage() {
 
   const chances = MAX_NUM_CHANCES - wrongL.length;
   if (winner === "W") {
-    messageEl.innerText = "WOW!! CONGRATS ON GUESSING THE RIGHT WORD! ";
+    messageEl.innerText = "WOW!! CONGRATS ON GUESSING THE RIGHT WORD!";
   } else if (winner === "L") {
     messageEl.innerText = "OH NO! GINGY IS BROKEN 😭 TRY AGAIN!";
   } else {

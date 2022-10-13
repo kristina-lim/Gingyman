@@ -59,8 +59,6 @@ When the player chooses the right letter, the button turns green:
 <br />
 <img src="imgs/correct-letter.png">
 
-
-
 <br />
 If the player wins or loses the game, the replay button pops up on the bottom:
 <br />
