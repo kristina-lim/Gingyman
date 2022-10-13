@@ -10,19 +10,55 @@ If the player uses all six chances, a message will pop up indicating that the pl
 
 </br>
 <h2>Screenshots</h2>
-The start of the game:
+The start of the game, with 6 chances:
 </br>
 <img src="imgs/start-game.png">
 
 </br>
-When the player chooses the wrong letter and Gingy loses a piece of himself:
+When the player chooses the right letter, the button turns green:
+</br>
+<img src="imgs/correct-letter.png">
+
+</br>
+When the player chooses the wrong letter, the button turns red:
 </br>
 <img src="imgs/incorrect-letter.png">
 
 </br>
-When the player chooses the right letter:
+When the player chooses the first incorrect guess, the number of chances goes down to 5, and Gingy loses a leg:
 </br>
-<img src="imgs/correct-letter.png">
+<img src="imgs/chances-5.png">
+
+</br>
+Second incorrect guess and the message is displayed with "4 chances left":
+</br>
+<img src="imgs/chances-4.png">
+
+</br>
+Third incorrect guess and the message is displayed with "3 chances left":
+</br>
+<img src="imgs/chances-3.png">
+
+</br>
+Fourth incorrect guess and the message is displayed with "2 chances left":
+</br>
+<img src="imgs/chances-2.png">
+
+</br>
+Fifth incorrect guess and the message is displayed with "1 chances left":
+</br>
+<img src="imgs/chances-1.png">
+
+</br>
+When the player loses all their chances, Gingy disappears and a lost message shows up on the top:
+</br>
+<img src="imgs/lose-message.png">
+
+</br>
+When the player wins the game, a congratulatory message shows up on the top:
+</br>
+<img src="imgs/win-message.png">
+
 
 </br>
 If the player wins or loses the game, the replay button pops up on the bottom:
@@ -30,27 +66,18 @@ If the player wins or loses the game, the replay button pops up on the bottom:
 <img src="imgs/replay-button.png">
 
 </br>
-When the player wins the game, a congratulatory message shows up on the top:
-</br>
-<img src="imgs/win-message.png">
-
-</br>
-When the player loses, a lost message shows up on the top:
-</br>
-<img src="imgs/lose-message.png">
-
-</br>
 <h2>Technologies Used</h2>
 
 * HTML
 * CSS
 * JavaScript
+
 </br>
 <h2>Getting Started</h2>
 Click this link down below to play:
-</br>
 
-[Play Gingyman]('https://kristina-lim.github.io/Gingyman/')
+[Play Gingyman](https://kristina-lim.github.io/Gingyman/)
+
 </br>
 <h2>Next Steps (Icebox Items)</h2>
 
