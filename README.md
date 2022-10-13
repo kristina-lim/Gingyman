@@ -1,6 +1,6 @@
 <h1>GINGYMAN</h1>
 <h2>Welcome to Kristina's Gingyman!</h2>
-This game is an alternative version of Spaceman. The outcome of this game is to guess a letter and see if the letter is displayed in the underscore(s). There are six chances given, and each incorrect letter guessed will remove a piece of Gingy.
+This game is another version of Spaceman. The outcome of this game is to guess a letter and see if the letter is displayed in the underscore(s). There are six chances given, and each incorrect letter guessed will remove a piece of Gingy.
 <br />
 <br />
 When the player selects a letter, the letter will not be able to be clicked again. All buttons are a shade of yellowish brown and if an incorrect letter is guessed, the button color will change to red. Otherwise, if a correct letter is guessed, the letter will replace the underscore(s), and the button color will change to green. Once a letter is clicked, the player will not be able to click the same letter.
@@ -13,16 +13,6 @@ If the player uses all six chances, a message will pop up indicating that the pl
 The start of the game, with 6 chances:
 <br />
 <img src="imgs/start-game.png">
-
-<br />
-When the player chooses the right letter, the button turns green:
-<br />
-<img src="imgs/correct-letter.png">
-
-<br />
-When the player chooses the wrong letter, the button turns red:
-<br />
-<img src="imgs/incorrect-letter.png">
 
 <br />
 When the player chooses the first incorrect guess, the number of chances goes down to 5, and Gingy loses a leg:
@@ -55,9 +45,21 @@ When the player loses all their chances, Gingy disappears and a lost message sho
 <img src="imgs/lose-message.png">
 
 <br />
-When the player wins the game, a congratulatory message shows up on the top:
+When the player guesses the correct word, a congratulatory message shows up on the top:
 <br />
 <img src="imgs/win-message.png">
+
+<br />
+When the player chooses the wrong letter, the button turns red:
+<br />
+<img src="imgs/incorrect-letter.png">
+
+<br />
+When the player chooses the right letter, the button turns green:
+<br />
+<img src="imgs/correct-letter.png">
+
+
 
 <br />
 If the player wins or loses the game, the replay button pops up on the bottom:
