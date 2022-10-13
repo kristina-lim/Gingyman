@@ -47,7 +47,8 @@ When the player loses, a lost message shows up on the top:
 * JavaScript
 </br>
 <h2>Getting Started</h2>
-Click this link down below to play Gingyman:
+Click this link down below to play:
+
 [Play Gingyman]("https://kristina-lim.github.io/Gingyman/")
 
 </br>
