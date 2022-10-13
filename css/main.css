@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Mountains of Christmas', cursive;
 }
 
 body {
@@ -17,21 +18,22 @@ body {
     left: 0;
     background-image: url('https://th.bing.com/th/id/R.d1a78d8906a821180239255c9fc9309f?rik=JxknTHxi1nXFnw&riu=http%3a%2f%2f33.media.tumblr.com%2f5320b5b2328e47c1dc6c4d95a65c7370%2ftumblr_n6t4bk2usP1snc5kxo2_r1_500.gif&ehk=Z%2fOGSPTOOwc4uAbKTkJDCDFHwPnhtK3xvxOG3aRhVhs%3d&risl=&pid=ImgRaw&r=0');
     background-size: cover;
-    pointer-events: all;
     cursor: url(https://cur.cursors-4u.net/holidays/hol-4/hol360.ani), url(https://cur.cursors-4u.net/holidays/hol-4/hol360.png), auto !important;
 } 
 
 h1 {
-    margin-top: 0px;
+    margin-top: -9px;
 }
 
 h2 {
-    margin-top: -10px;
+    margin-top: -18px;
     font-size: 2.5vmin;
+    color: #8B4513;
 }
 
 h3 {
-    margin-top: -17px;
+    margin-top: -28px;
+    color: #8B4513;
 }
 
 
@@ -46,14 +48,14 @@ button {
 #gingy {
     width: 275px;
     height: 375px;
-    margin-top: -33px;
+    margin-top: -50px;
 }
 
 #guess { 
     color: #BD9A7A;
     font-size: 3vmin;
     letter-spacing: 1vmin;
-    margin-top: -30px;
+    margin-top: -40px;
 }
 
 #letter {
